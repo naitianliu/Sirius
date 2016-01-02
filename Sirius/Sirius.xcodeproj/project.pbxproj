@@ -15,6 +15,8 @@
 		4624550D1C376AE1002FD3A6 /* SiriusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624550C1C376AE1002FD3A6 /* SiriusTests.swift */; };
 		462455181C376AE1002FD3A6 /* SiriusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455171C376AE1002FD3A6 /* SiriusUITests.swift */; };
 		462455261C376B67002FD3A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 462455251C376B67002FD3A6 /* Podfile */; };
+		462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455271C378130002FD3A6 /* MyServersSplitViewController.swift */; };
+		4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		462455171C376AE1002FD3A6 /* SiriusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusUITests.swift; sourceTree = "<group>"; };
 		462455191C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462455251C376B67002FD3A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		462455271C378130002FD3A6 /* MyServersSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersSplitViewController.swift; sourceTree = "<group>"; };
+		462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersLeftViewController.swift; sourceTree = "<group>"; };
 		83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 				462454FE1C376AE1002FD3A6 /* Assets.xcassets */,
 				462455001C376AE1002FD3A6 /* Main.storyboard */,
 				462455031C376AE1002FD3A6 /* Info.plist */,
+				462455271C378130002FD3A6 /* MyServersSplitViewController.swift */,
+				462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */,
 			);
 			path = Sirius;
 			sourceTree = "<group>";
@@ -333,6 +339,8 @@
 			files = (
 				462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */,
 				462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */,
+				4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */,
+				462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
