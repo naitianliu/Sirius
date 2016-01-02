@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A35F192FF81BFAE92482FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019E6848F596D6348A72047 /* libPods.a */; };
 		462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FA1C376AE1002FD3A6 /* AppDelegate.swift */; };
 		462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FC1C376AE1002FD3A6 /* ViewController.swift */; };
 		462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462454FE1C376AE1002FD3A6 /* Assets.xcassets */; };
 		462455021C376AE1002FD3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462455001C376AE1002FD3A6 /* Main.storyboard */; };
 		4624550D1C376AE1002FD3A6 /* SiriusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624550C1C376AE1002FD3A6 /* SiriusTests.swift */; };
 		462455181C376AE1002FD3A6 /* SiriusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455171C376AE1002FD3A6 /* SiriusUITests.swift */; };
+		462455261C376B67002FD3A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 462455251C376B67002FD3A6 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1019E6848F596D6348A72047 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		382684531139AC687A976522 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		462454F71C376AE1002FD3A6 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462454FA1C376AE1002FD3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		462454FC1C376AE1002FD3A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		462455131C376AE1002FD3A6 /* SiriusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462455171C376AE1002FD3A6 /* SiriusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusUITests.swift; sourceTree = "<group>"; };
 		462455191C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462455251C376B67002FD3A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A35F192FF81BFAE92482FE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +82,13 @@
 		462454EE1C376AE1002FD3A6 = {
 			isa = PBXGroup;
 			children = (
+				462455251C376B67002FD3A6 /* Podfile */,
 				462454F91C376AE1002FD3A6 /* Sirius */,
 				4624550B1C376AE1002FD3A6 /* SiriusTests */,
 				462455161C376AE1002FD3A6 /* SiriusUITests */,
 				462454F81C376AE1002FD3A6 /* Products */,
+				EF2B5DEA49FF532084BB1AD6 /* Pods */,
+				A34C6A93420A831BECF5F651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +132,23 @@
 			path = SiriusUITests;
 			sourceTree = "<group>";
 		};
+		A34C6A93420A831BECF5F651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1019E6848F596D6348A72047 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF2B5DEA49FF532084BB1AD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */,
+				382684531139AC687A976522 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4624551C1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "Sirius" */;
 			buildPhases = (
+				70BD4DA729AE0F49EA4F42E4 /* Check Pods Manifest.lock */,
 				462454F31C376AE1002FD3A6 /* Sources */,
 				462454F41C376AE1002FD3A6 /* Frameworks */,
 				462454F51C376AE1002FD3A6 /* Resources */,
+				217B2AB27C7DA56652C30F0A /* Embed Pods Frameworks */,
+				4DD423EFB6AE678A551130DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462455261C376B67002FD3A6 /* Podfile in Resources */,
 				462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */,
 				462455021C376AE1002FD3A6 /* Main.storyboard in Resources */,
 			);
@@ -246,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		217B2AB27C7DA56652C30F0A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD423EFB6AE678A551130DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70BD4DA729AE0F49EA4F42E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		462454F31C376AE1002FD3A6 /* Sources */ = {
@@ -382,6 +461,7 @@
 		};
 		4624551D1C376AE1002FD3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -394,6 +474,7 @@
 		};
 		4624551E1C376AE1002FD3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 382684531139AC687A976522 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -475,6 +556,7 @@
 				4624551E1C376AE1002FD3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4624551F1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +565,7 @@
 				462455211C376AE1002FD3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462455221C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +574,7 @@
 				462455241C376AE1002FD3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
