@@ -789,15 +789,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="N71-yy-Hnt">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <rect key="frame" x="185" y="1" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BPb-kc-TZU">
+                                <rect key="frame" x="5" y="4" width="19" height="21"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tv9-uS-SeM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="addButtonOnClick:" target="oeh-1G-G3k" id="bLv-CE-GUn"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bUs-5I-1FE" firstAttribute="top" secondItem="edP-Aj-0UV" secondAttribute="top" id="Aep-tf-CgA"/>
-                            <constraint firstItem="bUs-5I-1FE" firstAttribute="leading" secondItem="edP-Aj-0UV" secondAttribute="leading" id="THV-mE-sNY"/>
-                            <constraint firstAttribute="trailing" secondItem="bUs-5I-1FE" secondAttribute="trailing" id="nQF-6l-CcC"/>
+                            <constraint firstItem="bUs-5I-1FE" firstAttribute="top" secondItem="edP-Aj-0UV" secondAttribute="top" constant="-1" id="Aep-tf-CgA"/>
+                            <constraint firstItem="bUs-5I-1FE" firstAttribute="leading" secondItem="edP-Aj-0UV" secondAttribute="leading" constant="-1" id="THV-mE-sNY"/>
+                            <constraint firstAttribute="trailing" secondItem="bUs-5I-1FE" secondAttribute="trailing" constant="-1" id="nQF-6l-CcC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -837,5 +847,6 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
     </resources>
 </document>

@@ -36,6 +36,27 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
         self.projOutlineView.expandItem(nil, expandChildren: true)
     }
     
+    @IBAction func addButtonOnClick(sender: AnyObject) {
+        let menu: NSMenu = NSMenu()
+        let menuItemAddProject = NSMenuItem(title: "Add New Project", action: Selector("addNewProjectOnSelected"), keyEquivalent: "")
+        let menuItemAddProfile = NSMenuItem(title: "Add New Profile", action: Selector("addNewProfileOnSelected"), keyEquivalent: "")
+        menu.addItem(menuItemAddProject)
+        menu.addItem(menuItemAddProfile)
+        let button: NSButton = sender as! NSButton
+        // NSMenu.popUpContextMenu(menu, withEvent: NSEvent(), forView: button)
+        let buttonRect: NSRect = (self.view.window?.convertRectToScreen(button.frame))!
+        let location: NSPoint = NSPoint(x: buttonRect.origin.x, y: buttonRect.origin.y - 5)
+        menu.popUpMenuPositioningItem(nil, atLocation: location, inView: nil)
+    }
+    
+    func addNewProjectOnSelected() {
+        print("add new project")
+    }
+    
+    func addNewProfileOnSelected() {
+        print("add new profile")
+    }
+    
     func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
         switch item {
         case let category as MSSidebarCategory:
@@ -114,10 +135,8 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
     }
     
     func outlineViewSelectionDidChange(notification: NSNotification) {
-        print(notification)
         let selectedIndex = notification.object?.selectedRow
         let object:AnyObject? = notification.object?.itemAtRow(selectedIndex!)
-        print(object)
         if object is MSSidebarOption {
             
         }
