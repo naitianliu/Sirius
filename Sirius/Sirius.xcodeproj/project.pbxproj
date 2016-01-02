@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FA1C376AE1002FD3A6 /* AppDelegate.swift */; };
+		462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FC1C376AE1002FD3A6 /* ViewController.swift */; };
+		462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462454FE1C376AE1002FD3A6 /* Assets.xcassets */; };
+		462455021C376AE1002FD3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462455001C376AE1002FD3A6 /* Main.storyboard */; };
+		4624550D1C376AE1002FD3A6 /* SiriusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624550C1C376AE1002FD3A6 /* SiriusTests.swift */; };
+		462455181C376AE1002FD3A6 /* SiriusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455171C376AE1002FD3A6 /* SiriusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		462455091C376AE1002FD3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462454EF1C376AE1002FD3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462454F61C376AE1002FD3A6;
+			remoteInfo = Sirius;
+		};
+		462455141C376AE1002FD3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462454EF1C376AE1002FD3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462454F61C376AE1002FD3A6;
+			remoteInfo = Sirius;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		462454F71C376AE1002FD3A6 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		462454FA1C376AE1002FD3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		462454FC1C376AE1002FD3A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		462454FE1C376AE1002FD3A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		462455011C376AE1002FD3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		462455031C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462455081C376AE1002FD3A6 /* SiriusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4624550C1C376AE1002FD3A6 /* SiriusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusTests.swift; sourceTree = "<group>"; };
+		4624550E1C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462455131C376AE1002FD3A6 /* SiriusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		462455171C376AE1002FD3A6 /* SiriusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusUITests.swift; sourceTree = "<group>"; };
+		462455191C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		462454F41C376AE1002FD3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462455051C376AE1002FD3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462455101C376AE1002FD3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		462454EE1C376AE1002FD3A6 = {
+			isa = PBXGroup;
+			children = (
+				462454F91C376AE1002FD3A6 /* Sirius */,
+				4624550B1C376AE1002FD3A6 /* SiriusTests */,
+				462455161C376AE1002FD3A6 /* SiriusUITests */,
+				462454F81C376AE1002FD3A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		462454F81C376AE1002FD3A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				462454F71C376AE1002FD3A6 /* Sirius.app */,
+				462455081C376AE1002FD3A6 /* SiriusTests.xctest */,
+				462455131C376AE1002FD3A6 /* SiriusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		462454F91C376AE1002FD3A6 /* Sirius */ = {
+			isa = PBXGroup;
+			children = (
+				462454FA1C376AE1002FD3A6 /* AppDelegate.swift */,
+				462454FC1C376AE1002FD3A6 /* ViewController.swift */,
+				462454FE1C376AE1002FD3A6 /* Assets.xcassets */,
+				462455001C376AE1002FD3A6 /* Main.storyboard */,
+				462455031C376AE1002FD3A6 /* Info.plist */,
+			);
+			path = Sirius;
+			sourceTree = "<group>";
+		};
+		4624550B1C376AE1002FD3A6 /* SiriusTests */ = {
+			isa = PBXGroup;
+			children = (
+				4624550C1C376AE1002FD3A6 /* SiriusTests.swift */,
+				4624550E1C376AE1002FD3A6 /* Info.plist */,
+			);
+			path = SiriusTests;
+			sourceTree = "<group>";
+		};
+		462455161C376AE1002FD3A6 /* SiriusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				462455171C376AE1002FD3A6 /* SiriusUITests.swift */,
+				462455191C376AE1002FD3A6 /* Info.plist */,
+			);
+			path = SiriusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		462454F61C376AE1002FD3A6 /* Sirius */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4624551C1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "Sirius" */;
+			buildPhases = (
+				462454F31C376AE1002FD3A6 /* Sources */,
+				462454F41C376AE1002FD3A6 /* Frameworks */,
+				462454F51C376AE1002FD3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sirius;
+			productName = Sirius;
+			productReference = 462454F71C376AE1002FD3A6 /* Sirius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		462455071C376AE1002FD3A6 /* SiriusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4624551F1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusTests" */;
+			buildPhases = (
+				462455041C376AE1002FD3A6 /* Sources */,
+				462455051C376AE1002FD3A6 /* Frameworks */,
+				462455061C376AE1002FD3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4624550A1C376AE1002FD3A6 /* PBXTargetDependency */,
+			);
+			name = SiriusTests;
+			productName = SiriusTests;
+			productReference = 462455081C376AE1002FD3A6 /* SiriusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		462455121C376AE1002FD3A6 /* SiriusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462455221C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusUITests" */;
+			buildPhases = (
+				4624550F1C376AE1002FD3A6 /* Sources */,
+				462455101C376AE1002FD3A6 /* Frameworks */,
+				462455111C376AE1002FD3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462455151C376AE1002FD3A6 /* PBXTargetDependency */,
+			);
+			name = SiriusUITests;
+			productName = SiriusUITests;
+			productReference = 462455131C376AE1002FD3A6 /* SiriusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		462454EF1C376AE1002FD3A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = naitianliu;
+				TargetAttributes = {
+					462454F61C376AE1002FD3A6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					462455071C376AE1002FD3A6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 462454F61C376AE1002FD3A6;
+					};
+					462455121C376AE1002FD3A6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 462454F61C376AE1002FD3A6;
+					};
+				};
+			};
+			buildConfigurationList = 462454F21C376AE1002FD3A6 /* Build configuration list for PBXProject "Sirius" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 462454EE1C376AE1002FD3A6;
+			productRefGroup = 462454F81C376AE1002FD3A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				462454F61C376AE1002FD3A6 /* Sirius */,
+				462455071C376AE1002FD3A6 /* SiriusTests */,
+				462455121C376AE1002FD3A6 /* SiriusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		462454F51C376AE1002FD3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */,
+				462455021C376AE1002FD3A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462455061C376AE1002FD3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462455111C376AE1002FD3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		462454F31C376AE1002FD3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */,
+				462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462455041C376AE1002FD3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4624550D1C376AE1002FD3A6 /* SiriusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4624550F1C376AE1002FD3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462455181C376AE1002FD3A6 /* SiriusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4624550A1C376AE1002FD3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462454F61C376AE1002FD3A6 /* Sirius */;
+			targetProxy = 462455091C376AE1002FD3A6 /* PBXContainerItemProxy */;
+		};
+		462455151C376AE1002FD3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462454F61C376AE1002FD3A6 /* Sirius */;
+			targetProxy = 462455141C376AE1002FD3A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		462455001C376AE1002FD3A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462455011C376AE1002FD3A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4624551A1C376AE1002FD3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4624551B1C376AE1002FD3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4624551D1C376AE1002FD3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sirius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.Sirius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4624551E1C376AE1002FD3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sirius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.Sirius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		462455201C376AE1002FD3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SiriusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.SiriusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sirius.app/Contents/MacOS/Sirius";
+			};
+			name = Debug;
+		};
+		462455211C376AE1002FD3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SiriusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.SiriusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sirius.app/Contents/MacOS/Sirius";
+			};
+			name = Release;
+		};
+		462455231C376AE1002FD3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SiriusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.SiriusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sirius;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		462455241C376AE1002FD3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SiriusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naitianliu.SiriusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sirius;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		462454F21C376AE1002FD3A6 /* Build configuration list for PBXProject "Sirius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4624551A1C376AE1002FD3A6 /* Debug */,
+				4624551B1C376AE1002FD3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4624551C1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "Sirius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4624551D1C376AE1002FD3A6 /* Debug */,
+				4624551E1C376AE1002FD3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4624551F1C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462455201C376AE1002FD3A6 /* Debug */,
+				462455211C376AE1002FD3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462455221C376AE1002FD3A6 /* Build configuration list for PBXNativeTarget "SiriusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462455231C376AE1002FD3A6 /* Debug */,
+				462455241C376AE1002FD3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 462454EF1C376AE1002FD3A6 /* Project object */;
+}
