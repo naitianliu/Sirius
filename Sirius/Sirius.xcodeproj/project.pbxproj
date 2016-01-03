@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15A35F192FF81BFAE92482FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019E6848F596D6348A72047 /* libPods.a */; };
 		462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FA1C376AE1002FD3A6 /* AppDelegate.swift */; };
 		462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462454FC1C376AE1002FD3A6 /* ViewController.swift */; };
 		462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462454FE1C376AE1002FD3A6 /* Assets.xcassets */; };
@@ -17,6 +16,9 @@
 		462455261C376B67002FD3A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 462455251C376B67002FD3A6 /* Podfile */; };
 		462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455271C378130002FD3A6 /* MyServersSplitViewController.swift */; };
 		4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */; };
+		4624552E1C3886F5002FD3A6 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624552D1C3886F5002FD3A6 /* ProjectModel.swift */; };
+		462455311C389E29002FD3A6 /* MyServersMiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */; };
+		D69B528B0BBB72218A0BC7F7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E55E52311D9222B86A1FD8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1019E6848F596D6348A72047 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		382684531139AC687A976522 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		462454F71C376AE1002FD3A6 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462454FA1C376AE1002FD3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,9 +52,12 @@
 		462455131C376AE1002FD3A6 /* SiriusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462455171C376AE1002FD3A6 /* SiriusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusUITests.swift; sourceTree = "<group>"; };
 		462455191C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		462455251C376B67002FD3A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		462455251C376B67002FD3A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		462455271C378130002FD3A6 /* MyServersSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersSplitViewController.swift; sourceTree = "<group>"; };
 		462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersLeftViewController.swift; sourceTree = "<group>"; };
+		4624552D1C3886F5002FD3A6 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersMiddleViewController.swift; sourceTree = "<group>"; };
+		46E55E52311D9222B86A1FD8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A35F192FF81BFAE92482FE /* libPods.a in Frameworks */,
+				D69B528B0BBB72218A0BC7F7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,13 +113,12 @@
 		462454F91C376AE1002FD3A6 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				4624552B1C3885F5002FD3A6 /* MyServers */,
 				462454FA1C376AE1002FD3A6 /* AppDelegate.swift */,
 				462454FC1C376AE1002FD3A6 /* ViewController.swift */,
 				462454FE1C376AE1002FD3A6 /* Assets.xcassets */,
 				462455001C376AE1002FD3A6 /* Main.storyboard */,
 				462455031C376AE1002FD3A6 /* Info.plist */,
-				462455271C378130002FD3A6 /* MyServersSplitViewController.swift */,
-				462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */,
 			);
 			path = Sirius;
 			sourceTree = "<group>";
@@ -138,10 +141,37 @@
 			path = SiriusUITests;
 			sourceTree = "<group>";
 		};
+		4624552B1C3885F5002FD3A6 /* MyServers */ = {
+			isa = PBXGroup;
+			children = (
+				4624552F1C389DE1002FD3A6 /* ViewController */,
+				4624552C1C388610002FD3A6 /* Model */,
+			);
+			name = MyServers;
+			sourceTree = "<group>";
+		};
+		4624552C1C388610002FD3A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4624552D1C3886F5002FD3A6 /* ProjectModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4624552F1C389DE1002FD3A6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				462455271C378130002FD3A6 /* MyServersSplitViewController.swift */,
+				462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */,
+				462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		A34C6A93420A831BECF5F651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1019E6848F596D6348A72047 /* libPods.a */,
+				46E55E52311D9222B86A1FD8 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -337,7 +367,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4624552E1C3886F5002FD3A6 /* ProjectModel.swift in Sources */,
 				462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */,
+				462455311C389E29002FD3A6 /* MyServersMiddleViewController.swift in Sources */,
 				462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */,
 				4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */,
 				462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */,

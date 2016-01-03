@@ -8,14 +8,13 @@
 
 import Cocoa
 
-class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource {
-    
-    let dataExample = ["Proj1", "Proj2", "Proj3"]
+class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource, NSTextFieldDelegate {
     
     var category1 = MSSidebarCategory(name: "LIBRARY", icon: nil)
     var category2 = MSSidebarCategory(name: "PROJECTS", icon: nil)
 
     @IBOutlet weak var projOutlineView: NSOutlineView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -23,17 +22,21 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
         let color: CGColorRef = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0)
         self.view.layer?.backgroundColor = color
         
-        let option11 = MSSidebarOption(name: "Inbox", icon: nil)
-        let option21 = MSSidebarOption(name: "Proj1", icon: nil)
-        let option22 = MSSidebarOption(name: "Proj2", icon: nil)
-        let option23 = MSSidebarOption(name: "Proj3", icon: nil)
-        
+        let option11 = MSSidebarOption(name: "Inbox", icon: nil, isEditable: false)
         category1.options.append(option11)
-        category2.options.append(option21)
-        category2.options.append(option22)
-        category2.options.append(option23)
+        self.loadProjects()
         
         self.projOutlineView.expandItem(nil, expandChildren: true)
+    }
+    
+    func loadProjects() {
+        category2.clearAll()
+        let projectModelHelper = ProjectModelHelper()
+        let projects = projectModelHelper.getProjectList()
+        for project in projects {
+            let option = MSSidebarOption(name: project["name"]!, icon: nil, isEditable: false)
+            category2.options.append(option)
+        }
     }
     
     @IBAction func addButtonOnClick(sender: AnyObject) {
@@ -51,6 +54,10 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
     
     func addNewProjectOnSelected() {
         print("add new project")
+        let option = MSSidebarOption(name: "unname project", icon: nil, isEditable: true)
+        category2.options.append(option)
+        projOutlineView.reloadItem(nil, reloadChildren: true)
+        
     }
     
     func addNewProfileOnSelected() {
@@ -60,7 +67,7 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
     func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
         switch item {
         case let category as MSSidebarCategory:
-            return (category.options.count > 0) ? true : false
+            return (category.options.count > 0) ? true : true
         default:
             return false
         }
@@ -109,6 +116,10 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
             let view = outlineView.makeViewWithIdentifier("DataCell", owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = option.name
+                if option.isEditable {
+                    textField.editable = true
+                    textField.delegate = self
+                }
             }
             return view
         default:
@@ -142,6 +153,15 @@ class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOu
         }
     }
     
+    override func controlTextDidEndEditing(obj: NSNotification) {
+        let textField: NSTextField = obj.object as! NSTextField
+        let name = textField.stringValue
+        let projectModelHelper = ProjectModelHelper()
+        projectModelHelper.addNewProject(name)
+        self.loadProjects()
+        self.projOutlineView.reloadItem(nil, reloadChildren: true)
+        
+    }
 }
 
 class MSSidebarCategory: NSObject {
@@ -153,14 +173,20 @@ class MSSidebarCategory: NSObject {
         self.name = name
         self.icon = icon
     }
+    
+    func clearAll() {
+        self.options = []
+    }
 }
 
 class MSSidebarOption: NSObject {
     let name: String
     let icon: NSImage?
+    let isEditable: Bool
     
-    init(name:String, icon:NSImage?) {
+    init(name:String, icon:NSImage?, isEditable:Bool) {
         self.name = name
         self.icon = icon
+        self.isEditable = isEditable
     }
 }

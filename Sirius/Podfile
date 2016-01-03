@@ -1,1 +1,4 @@
 pod 'NMSSH'
+
+use_frameworks!
+pod 'RealmSwift'
