@@ -14,10 +14,16 @@
 		4624550D1C376AE1002FD3A6 /* SiriusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624550C1C376AE1002FD3A6 /* SiriusTests.swift */; };
 		462455181C376AE1002FD3A6 /* SiriusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455171C376AE1002FD3A6 /* SiriusUITests.swift */; };
 		462455261C376B67002FD3A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 462455251C376B67002FD3A6 /* Podfile */; };
-		462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455271C378130002FD3A6 /* MyServersSplitViewController.swift */; };
-		4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */; };
+		462455281C378130002FD3A6 /* MSSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455271C378130002FD3A6 /* MSSplitViewController.swift */; };
+		4624552A1C3789EE002FD3A6 /* MSLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455291C3789EE002FD3A6 /* MSLeftViewController.swift */; };
 		4624552E1C3886F5002FD3A6 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624552D1C3886F5002FD3A6 /* ProjectModel.swift */; };
-		462455311C389E29002FD3A6 /* MyServersMiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */; };
+		462455311C389E29002FD3A6 /* MSMiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455301C389E29002FD3A6 /* MSMiddleViewController.swift */; };
+		462455331C39B9A8002FD3A6 /* MSRightTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455321C39B9A8002FD3A6 /* MSRightTabViewController.swift */; };
+		462455351C39BA3D002FD3A6 /* MSConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455341C39BA3D002FD3A6 /* MSConfigurationViewController.swift */; };
+		462455381C39BB9B002FD3A6 /* MSConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455361C39BB9B002FD3A6 /* MSConsoleViewController.swift */; };
+		4624553B1C39CE8F002FD3A6 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553A1C39CE8F002FD3A6 /* ServerModel.swift */; };
+		4624553D1C39E0EF002FD3A6 /* SSHProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553C1C39E0EF002FD3A6 /* SSHProfileModel.swift */; };
+		4624553F1C39E112002FD3A6 /* SudoProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553E1C39E112002FD3A6 /* SudoProfileModel.swift */; };
 		D69B528B0BBB72218A0BC7F7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E55E52311D9222B86A1FD8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +59,16 @@
 		462455171C376AE1002FD3A6 /* SiriusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriusUITests.swift; sourceTree = "<group>"; };
 		462455191C376AE1002FD3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462455251C376B67002FD3A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		462455271C378130002FD3A6 /* MyServersSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersSplitViewController.swift; sourceTree = "<group>"; };
-		462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersLeftViewController.swift; sourceTree = "<group>"; };
+		462455271C378130002FD3A6 /* MSSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSplitViewController.swift; sourceTree = "<group>"; };
+		462455291C3789EE002FD3A6 /* MSLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSLeftViewController.swift; sourceTree = "<group>"; };
 		4624552D1C3886F5002FD3A6 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
-		462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyServersMiddleViewController.swift; sourceTree = "<group>"; };
+		462455301C389E29002FD3A6 /* MSMiddleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMiddleViewController.swift; sourceTree = "<group>"; };
+		462455321C39B9A8002FD3A6 /* MSRightTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRightTabViewController.swift; sourceTree = "<group>"; };
+		462455341C39BA3D002FD3A6 /* MSConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSConfigurationViewController.swift; sourceTree = "<group>"; };
+		462455361C39BB9B002FD3A6 /* MSConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSConsoleViewController.swift; sourceTree = "<group>"; };
+		4624553A1C39CE8F002FD3A6 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		4624553C1C39E0EF002FD3A6 /* SSHProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSHProfileModel.swift; sourceTree = "<group>"; };
+		4624553E1C39E112002FD3A6 /* SudoProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoProfileModel.swift; sourceTree = "<group>"; };
 		46E55E52311D9222B86A1FD8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				4624552D1C3886F5002FD3A6 /* ProjectModel.swift */,
+				4624553A1C39CE8F002FD3A6 /* ServerModel.swift */,
+				4624553C1C39E0EF002FD3A6 /* SSHProfileModel.swift */,
+				4624553E1C39E112002FD3A6 /* SudoProfileModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,9 +176,12 @@
 		4624552F1C389DE1002FD3A6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				462455271C378130002FD3A6 /* MyServersSplitViewController.swift */,
-				462455291C3789EE002FD3A6 /* MyServersLeftViewController.swift */,
-				462455301C389E29002FD3A6 /* MyServersMiddleViewController.swift */,
+				462455271C378130002FD3A6 /* MSSplitViewController.swift */,
+				462455291C3789EE002FD3A6 /* MSLeftViewController.swift */,
+				462455301C389E29002FD3A6 /* MSMiddleViewController.swift */,
+				462455321C39B9A8002FD3A6 /* MSRightTabViewController.swift */,
+				462455341C39BA3D002FD3A6 /* MSConfigurationViewController.swift */,
+				462455361C39BB9B002FD3A6 /* MSConsoleViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -368,11 +386,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4624552E1C3886F5002FD3A6 /* ProjectModel.swift in Sources */,
+				462455331C39B9A8002FD3A6 /* MSRightTabViewController.swift in Sources */,
+				4624553B1C39CE8F002FD3A6 /* ServerModel.swift in Sources */,
+				462455381C39BB9B002FD3A6 /* MSConsoleViewController.swift in Sources */,
 				462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */,
-				462455311C389E29002FD3A6 /* MyServersMiddleViewController.swift in Sources */,
+				462455311C389E29002FD3A6 /* MSMiddleViewController.swift in Sources */,
+				4624553F1C39E112002FD3A6 /* SudoProfileModel.swift in Sources */,
+				462455351C39BA3D002FD3A6 /* MSConfigurationViewController.swift in Sources */,
 				462454FB1C376AE1002FD3A6 /* AppDelegate.swift in Sources */,
-				4624552A1C3789EE002FD3A6 /* MyServersLeftViewController.swift in Sources */,
-				462455281C378130002FD3A6 /* MyServersSplitViewController.swift in Sources */,
+				4624552A1C3789EE002FD3A6 /* MSLeftViewController.swift in Sources */,
+				462455281C378130002FD3A6 /* MSSplitViewController.swift in Sources */,
+				4624553D1C39E0EF002FD3A6 /* SSHProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

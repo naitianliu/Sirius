@@ -8,11 +8,14 @@
 
 import Cocoa
 
-class MyServersMiddleViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class MSMiddleViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
     @IBOutlet weak var serverTableView: NSTableView!
     
-    let sampleData = [["ip": "10.1.2.3.", "hostname": "test1.knockfuture.com"]]
+    let sampleData = [
+        ["ip": "10.1.2.3", "hostname": "test1.knockfuture.com"],
+        ["ip": "10.1.2.4", "hostname": "test2.knockfuture.com"]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +35,12 @@ class MyServersMiddleViewController: NSViewController, NSTableViewDelegate, NSTa
         let rowDict: [String: String] = self.sampleData[row]
         let identifier:String = tableColumn!.identifier
         let value:String = rowDict[identifier]!
-        print(value)
         return value
+    }
+    
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        let selectedIndex = notification.object!.selectedRow
+        print(selectedIndex)
     }
     
 }

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class MyServersSplitViewController: NSSplitViewController {
+class MSSplitViewController: NSSplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

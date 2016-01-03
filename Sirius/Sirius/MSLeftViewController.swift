@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class MyServersLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource, NSTextFieldDelegate {
+class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource, NSTextFieldDelegate {
     
     var category1 = MSSidebarCategory(name: "LIBRARY", icon: nil)
     var category2 = MSSidebarCategory(name: "PROJECTS", icon: nil)

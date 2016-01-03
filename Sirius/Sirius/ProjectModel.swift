@@ -10,6 +10,7 @@ import RealmSwift
 
 class ProjectModel: Object {
     
+    dynamic var uuid = ""
     dynamic var name = ""
     
 }
@@ -24,7 +25,9 @@ class ProjectModelHelper {
         // else if duplicated project name, statusCode = 1, 
         // else if exception, status code = 2
         var statusCode: Int = 0
+        let uuid: String = NSUUID().UUIDString
         let project = ProjectModel()
+        project.uuid = uuid
         project.name = name
         do {
             let realm = try Realm()
@@ -51,6 +54,7 @@ class ProjectModelHelper {
             let projects = realm.objects(ProjectModel)
             for project in projects {
                 let projectDict = [
+                    "uuid": project.uuid,
                     "name": project.name
                 ]
                 projectList.append(projectDict)
