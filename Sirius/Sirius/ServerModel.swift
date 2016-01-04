@@ -33,7 +33,7 @@ class ServerModelHelper {
         
     }
     
-    func addNewServer(projectUUID:String) {
+    func addNewServer(projectUUID:String) -> String {
         // initiate a new server object with empty parameters except projectUUID
         let uuid = NSUUID().UUIDString
         let server = ServerModel()
@@ -47,6 +47,7 @@ class ServerModelHelper {
         } catch {
             print(error)
         }
+        return uuid
     }
     
     func updateServer(uuid:String, keyPath:String, value:String) -> Int {
@@ -68,9 +69,26 @@ class ServerModelHelper {
         return statusCode
     }
     
-    func getServersByProject(projctUUID:String) -> [[String:String]] {
+    func getServersByProject(projectUUID:String) -> [[String:String]] {
         var servers: [[String:String]] = []
-        
+        do {
+            let realm = try Realm()
+            for serverObj in realm.objects(ServerModel).filter("projectUUID = '\(projectUUID)'") {
+                let serverDict = [
+                    "uuid": serverObj.uuid,
+                    "projectUUID": serverObj.projectUUID,
+                    "ip": serverObj.ip,
+                    "hostname": serverObj.hostname,
+                    "tag": serverObj.tag,
+                    "note": serverObj.note,
+                    "sshProfileUUID": serverObj.sshProfileUUID,
+                    "sudoProfileUUID": serverObj.sudoProfileUUID
+                ]
+                servers.append(serverDict)
+            }
+        } catch {
+            print(error)
+        }
         return servers
     }
     
@@ -78,6 +96,12 @@ class ServerModelHelper {
         var detailedInfo = Dictionary<String, AnyObject>()
         
         return detailedInfo
+    }
+    
+    func getTagListByProject(projectUUID:String) -> [String] {
+        var tagList: [String] = []
+        
+        return tagList
     }
     
 }

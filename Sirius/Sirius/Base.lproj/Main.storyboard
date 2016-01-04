@@ -681,29 +681,19 @@
         <scene sceneID="N6U-vF-ar9">
             <objects>
                 <splitViewController id="Ga3-Em-9bS" customClass="MSSplitViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
-                    <splitViewItems>
-                        <splitViewItem id="thy-rb-xHd"/>
-                        <splitViewItem id="XsC-uk-3ee"/>
-                        <splitViewItem id="cRD-Gm-liv"/>
-                    </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Vc8-Ca-4LP">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="948" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
-                    <connections>
-                        <segue destination="oeh-1G-G3k" kind="relationship" relationship="splitItems" id="tSn-jO-EDc"/>
-                        <segue destination="xdX-od-QKH" kind="relationship" relationship="splitItems" id="apT-qp-5kE"/>
-                        <segue destination="WJk-8b-s9b" kind="relationship" relationship="splitItems" id="A6M-Iv-1ak"/>
-                    </connections>
                 </splitViewController>
                 <customObject id="Y09-CZ-dO5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="796"/>
+            <point key="canvasLocation" x="75" y="844"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="fOB-XI-8yv">
             <objects>
-                <viewController id="oeh-1G-G3k" customClass="MSLeftViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MSLeftViewController" id="oeh-1G-G3k" customClass="MSLeftViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="edP-Aj-0UV">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -816,12 +806,12 @@
                 </viewController>
                 <customObject id="SK8-PT-ifi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="796"/>
+            <point key="canvasLocation" x="-612" y="796"/>
         </scene>
         <!--Middle View Controller-->
         <scene sceneID="NMx-9l-hhy">
             <objects>
-                <viewController id="xdX-od-QKH" customClass="MSMiddleViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MSMiddleViewController" id="xdX-od-QKH" customClass="MSMiddleViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GE9-m1-Yef">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -834,6 +824,9 @@
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6PF-NP-s70">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="addButtonOnClick:" target="xdX-od-QKH" id="fzY-GL-yft"/>
+                                            </connections>
                                         </buttonCell>
                                     </button>
                                     <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seK-B8-qy7">
@@ -927,7 +920,7 @@
         <!--Right Tab View Controller-->
         <scene sceneID="8jr-YH-1Nc">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="WJk-8b-s9b" customClass="MSRightTabViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController storyboardIdentifier="MSRightTabViewController" selectedTabViewItemIndex="0" id="WJk-8b-s9b" customClass="MSRightTabViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="Hsr-h2-0Do"/>
                         <tabViewItem identifier="" id="B7X-XP-oIt"/>

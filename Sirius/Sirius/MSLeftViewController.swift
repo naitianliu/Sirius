@@ -8,10 +8,16 @@
 
 import Cocoa
 
+protocol MSLeftViewControllerDelegate {
+    func projectSelected(projectUUID:String)
+}
+
 class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource, NSTextFieldDelegate {
     
-    var category1 = MSSidebarCategory(name: "LIBRARY", icon: nil)
-    var category2 = MSSidebarCategory(name: "PROJECTS", icon: nil)
+    var categoryLibrary = MSSidebarCategory(name: "LIBRARY", icon: nil)
+    var categoryProject = MSSidebarCategory(name: "PROJECTS", icon: nil)
+    
+    var delegate: MSLeftViewControllerDelegate?
 
     @IBOutlet weak var projOutlineView: NSOutlineView!
     
@@ -22,20 +28,20 @@ class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineVi
         let color: CGColorRef = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0)
         self.view.layer?.backgroundColor = color
         
-        let option11 = MSSidebarOption(name: "Inbox", icon: nil, isEditable: false)
-        category1.options.append(option11)
+        let option11 = MSSidebarOption(uuid: "", name: "Inbox", icon: nil, isEditable: false)
+        categoryLibrary.options.append(option11)
         self.loadProjects()
         
         self.projOutlineView.expandItem(nil, expandChildren: true)
     }
     
     func loadProjects() {
-        category2.clearAll()
+        categoryProject.clearAll()
         let projectModelHelper = ProjectModelHelper()
         let projects = projectModelHelper.getProjectList()
         for project in projects {
-            let option = MSSidebarOption(name: project["name"]!, icon: nil, isEditable: false)
-            category2.options.append(option)
+            let option = MSSidebarOption(uuid: project["uuid"]!, name: project["name"]!, icon: nil, isEditable: false)
+            categoryProject.options.append(option)
         }
     }
     
@@ -54,8 +60,8 @@ class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineVi
     
     func addNewProjectOnSelected() {
         print("add new project")
-        let option = MSSidebarOption(name: "unname project", icon: nil, isEditable: true)
-        category2.options.append(option)
+        let option = MSSidebarOption(uuid: "", name: "unname project", icon: nil, isEditable: true)
+        categoryProject.options.append(option)
         projOutlineView.reloadItem(nil, reloadChildren: true)
         
     }
@@ -84,9 +90,9 @@ class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineVi
         } else {
             switch index {
             case 0:
-                return category1
+                return categoryLibrary
             default:
-                return category2
+                return categoryProject
             }
         }
     }
@@ -149,7 +155,10 @@ class MSLeftViewController: NSViewController, NSOutlineViewDelegate, NSOutlineVi
         let selectedIndex = notification.object?.selectedRow
         let object:AnyObject? = notification.object?.itemAtRow(selectedIndex!)
         if object is MSSidebarOption {
-            
+            let option = object as! MSSidebarOption
+            let projectUUID = option.uuid
+            print("selected")
+            delegate?.projectSelected(projectUUID)
         }
     }
     
@@ -180,11 +189,13 @@ class MSSidebarCategory: NSObject {
 }
 
 class MSSidebarOption: NSObject {
+    let uuid: String
     let name: String
     let icon: NSImage?
     let isEditable: Bool
     
-    init(name:String, icon:NSImage?, isEditable:Bool) {
+    init(uuid:String, name:String, icon:NSImage?, isEditable:Bool) {
+        self.uuid = uuid
         self.name = name
         self.icon = icon
         self.isEditable = isEditable
