@@ -645,27 +645,40 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sirius" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-107"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Sirius" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="195" y="535" width="480" height="270"/>
+                        <rect key="contentRect" x="159" y="346" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="1000" height="500"/>
                         <value key="maxSize" type="size" width="1000" height="500"/>
                         <toolbar key="toolbar" implicitIdentifier="F347F634-E6EA-410B-BCA2-6BC4910BEB1E" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="ize-80-PD4">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="EEE0592D-4368-4147-9A39-5B767D9AB5D5" label="My Servers" paletteLabel="My Servers" tag="-1" id="0uv-6G-L4F"/>
-                                <toolbarItem implicitItemIdentifier="BA6A0219-3E7C-40A6-81F0-AED4F3DE2C74" label="Script Hub" paletteLabel="Script Hub" tag="-1" id="COS-2W-2wO"/>
+                                <toolbarItem implicitItemIdentifier="EEE0592D-4368-4147-9A39-5B767D9AB5D5" label="My Servers" paletteLabel="My Servers" tag="-1" image="servers" id="0uv-6G-L4F">
+                                    <connections>
+                                        <action selector="MyServersToolbarItemOnClick:" target="B8D-0N-5wS" id="qOb-0I-qd9"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="BA6A0219-3E7C-40A6-81F0-AED4F3DE2C74" label="Script Hub" paletteLabel="Script Hub" tag="-1" image="script" id="COS-2W-2wO">
+                                    <connections>
+                                        <action selector="ScriptHubToolbarItemOnClick:" target="B8D-0N-5wS" id="fSB-Tw-9WF"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="BDD810D3-2DA5-41F6-8975-2139F887782A" label="Profiles" paletteLabel="Profiles" tag="-1" image="key" id="rTx-dy-Ltx">
+                                    <connections>
+                                        <action selector="profilesToolbarItemOnClick:" target="B8D-0N-5wS" id="6rU-aT-pQX"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="0uv-6G-L4F"/>
                                 <toolbarItem reference="COS-2W-2wO"/>
+                                <toolbarItem reference="rTx-dy-Ltx"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -680,15 +693,18 @@
         <!--Split View Controller-->
         <scene sceneID="N6U-vF-ar9">
             <objects>
-                <splitViewController id="Ga3-Em-9bS" customClass="MSSplitViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="MSSplitViewController" id="Ga3-Em-9bS" customClass="MSSplitViewController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Vc8-Ca-4LP">
-                        <rect key="frame" x="0.0" y="0.0" width="948" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
+                    <connections>
+                        <outlet property="view" destination="Vc8-Ca-4LP" id="IUv-ep-hfl"/>
+                    </connections>
                 </splitViewController>
                 <customObject id="Y09-CZ-dO5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="844"/>
+            <point key="canvasLocation" x="75" y="967"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="fOB-XI-8yv">
@@ -698,13 +714,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-5I-1FE">
+                            <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-5I-1FE">
                                 <rect key="frame" x="0.0" y="27" width="200" height="473"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="GZC-YL-FO2">
                                     <rect key="frame" x="1" y="1" width="198" height="471"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="uCU-Na-4tf" id="j98-sz-bPs">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="uCU-Na-4tf" id="j98-sz-bPs">
                                             <rect key="frame" x="0.0" y="0.0" width="198" height="471"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -775,7 +791,7 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Hmf-d7-HUT">
-                                    <rect key="frame" x="1" y="382.47728860378265" width="147.83462238311768" height="16"/>
+                                    <rect key="frame" x="1" y="382" width="148" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="N71-yy-Hnt">
@@ -806,7 +822,7 @@
                 </viewController>
                 <customObject id="SK8-PT-ifi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-612" y="796"/>
+            <point key="canvasLocation" x="-617" y="967"/>
         </scene>
         <!--Middle View Controller-->
         <scene sceneID="NMx-9l-hhy">
@@ -841,11 +857,11 @@
                             <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-em-LJR">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="466"/>
                                 <clipView key="contentView" ambiguous="YES" id="6bV-hg-BwV">
-                                    <rect key="frame" x="1" y="23" width="298" height="442"/>
+                                    <rect key="frame" x="1" y="0.0" width="298" height="465"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="8JT-XR-9Te" id="rah-ga-bN5">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="442"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="442"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -864,7 +880,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="hostname" width="192" minWidth="40" maxWidth="1000" id="nq9-NT-UoE">
+                                                <tableColumn identifier="hostname" width="190" minWidth="40" maxWidth="1000" id="nq9-NT-UoE">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Hostname">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -886,16 +902,16 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="88R-gq-6lY">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="88R-gq-6lY">
                                     <rect key="frame" x="1" y="449" width="298" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ScL-AZ-TJ9">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="ScL-AZ-TJ9">
+                                    <rect key="frame" x="285" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="8JT-XR-9Te">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="298" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -915,7 +931,7 @@
                 </viewController>
                 <customObject id="g72-JZ-dx4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="796"/>
+            <point key="canvasLocation" x="809" y="967"/>
         </scene>
         <!--Right Tab View Controller-->
         <scene sceneID="8jr-YH-1Nc">
@@ -938,7 +954,7 @@
                 </tabViewController>
                 <customObject id="mo6-mx-c1m" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1423"/>
+            <point key="canvasLocation" x="86" y="1626"/>
         </scene>
         <!--Configuration-->
         <scene sceneID="kV6-n0-bDP">
@@ -951,7 +967,7 @@
                 </viewController>
                 <customObject id="vmW-J6-2yx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1423"/>
+            <point key="canvasLocation" x="830" y="1626"/>
         </scene>
         <!--Console-->
         <scene sceneID="rgV-tK-FjW">
@@ -964,11 +980,14 @@
                 </viewController>
                 <customObject id="Q2N-io-Lji" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="2030"/>
+            <point key="canvasLocation" x="86" y="2212"/>
         </scene>
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="key" width="128" height="128"/>
+        <image name="script" width="500" height="500"/>
+        <image name="servers" width="256" height="256"/>
     </resources>
 </document>

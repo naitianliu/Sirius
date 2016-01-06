@@ -24,6 +24,11 @@
 		4624553B1C39CE8F002FD3A6 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553A1C39CE8F002FD3A6 /* ServerModel.swift */; };
 		4624553D1C39E0EF002FD3A6 /* SSHProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553C1C39E0EF002FD3A6 /* SSHProfileModel.swift */; };
 		4624553F1C39E112002FD3A6 /* SudoProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624553E1C39E112002FD3A6 /* SudoProfileModel.swift */; };
+		462455411C3B7CA9002FD3A6 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462455401C3B7CA9002FD3A6 /* MainWindowController.swift */; };
+		462455441C3B7FE7002FD3A6 /* Profiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462455431C3B7FE7002FD3A6 /* Profiles.storyboard */; };
+		46EB55451C3CE49F00EF3928 /* SSHProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB55431C3CE49F00EF3928 /* SSHProfilesViewController.swift */; };
+		46EB55481C3CE4BA00EF3928 /* SudoProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB55471C3CE4BA00EF3928 /* SudoProfilesViewController.swift */; };
+		46EB554A1C3CE4EE00EF3928 /* ProfilesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB55491C3CE4EE00EF3928 /* ProfilesTabViewController.swift */; };
 		D69B528B0BBB72218A0BC7F7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E55E52311D9222B86A1FD8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +74,12 @@
 		4624553A1C39CE8F002FD3A6 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		4624553C1C39E0EF002FD3A6 /* SSHProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSHProfileModel.swift; sourceTree = "<group>"; };
 		4624553E1C39E112002FD3A6 /* SudoProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoProfileModel.swift; sourceTree = "<group>"; };
+		462455401C3B7CA9002FD3A6 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		462455431C3B7FE7002FD3A6 /* Profiles.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profiles.storyboard; sourceTree = "<group>"; };
 		46E55E52311D9222B86A1FD8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB55431C3CE49F00EF3928 /* SSHProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSHProfilesViewController.swift; sourceTree = "<group>"; };
+		46EB55471C3CE4BA00EF3928 /* SudoProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoProfilesViewController.swift; sourceTree = "<group>"; };
+		46EB55491C3CE4EE00EF3928 /* ProfilesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTabViewController.swift; sourceTree = "<group>"; };
 		83A73EFB10068D2AA25BBA88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,11 +135,13 @@
 		462454F91C376AE1002FD3A6 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
-				4624552B1C3885F5002FD3A6 /* MyServers */,
 				462454FA1C376AE1002FD3A6 /* AppDelegate.swift */,
+				462455401C3B7CA9002FD3A6 /* MainWindowController.swift */,
+				462455001C376AE1002FD3A6 /* Main.storyboard */,
+				4624552B1C3885F5002FD3A6 /* MyServers */,
+				462455421C3B7F9E002FD3A6 /* Profiles */,
 				462454FC1C376AE1002FD3A6 /* ViewController.swift */,
 				462454FE1C376AE1002FD3A6 /* Assets.xcassets */,
-				462455001C376AE1002FD3A6 /* Main.storyboard */,
 				462455031C376AE1002FD3A6 /* Info.plist */,
 			);
 			path = Sirius;
@@ -182,6 +194,25 @@
 				462455321C39B9A8002FD3A6 /* MSRightTabViewController.swift */,
 				462455341C39BA3D002FD3A6 /* MSConfigurationViewController.swift */,
 				462455361C39BB9B002FD3A6 /* MSConsoleViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		462455421C3B7F9E002FD3A6 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				462455451C3B800F002FD3A6 /* ViewController */,
+				462455431C3B7FE7002FD3A6 /* Profiles.storyboard */,
+			);
+			name = Profiles;
+			sourceTree = "<group>";
+		};
+		462455451C3B800F002FD3A6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46EB55491C3CE4EE00EF3928 /* ProfilesTabViewController.swift */,
+				46EB55431C3CE49F00EF3928 /* SSHProfilesViewController.swift */,
+				46EB55471C3CE4BA00EF3928 /* SudoProfilesViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -312,6 +343,7 @@
 			files = (
 				462455261C376B67002FD3A6 /* Podfile in Resources */,
 				462454FF1C376AE1002FD3A6 /* Assets.xcassets in Resources */,
+				462455441C3B7FE7002FD3A6 /* Profiles.storyboard in Resources */,
 				462455021C376AE1002FD3A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +419,10 @@
 			files = (
 				4624552E1C3886F5002FD3A6 /* ProjectModel.swift in Sources */,
 				462455331C39B9A8002FD3A6 /* MSRightTabViewController.swift in Sources */,
+				462455411C3B7CA9002FD3A6 /* MainWindowController.swift in Sources */,
 				4624553B1C39CE8F002FD3A6 /* ServerModel.swift in Sources */,
+				46EB554A1C3CE4EE00EF3928 /* ProfilesTabViewController.swift in Sources */,
+				46EB55481C3CE4BA00EF3928 /* SudoProfilesViewController.swift in Sources */,
 				462455381C39BB9B002FD3A6 /* MSConsoleViewController.swift in Sources */,
 				462454FD1C376AE1002FD3A6 /* ViewController.swift in Sources */,
 				462455311C389E29002FD3A6 /* MSMiddleViewController.swift in Sources */,
@@ -397,6 +432,7 @@
 				4624552A1C3789EE002FD3A6 /* MSLeftViewController.swift in Sources */,
 				462455281C378130002FD3A6 /* MSSplitViewController.swift in Sources */,
 				4624553D1C39E0EF002FD3A6 /* SSHProfileModel.swift in Sources */,
+				46EB55451C3CE49F00EF3928 /* SSHProfilesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
